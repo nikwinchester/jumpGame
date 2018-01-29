@@ -262,6 +262,7 @@
             }
         },
         /* 控制role向下一个方块跳跃 */
+        
         jumpMove: function() {
             let roleScaleY = getNum(/scaleY.+/.exec(this.role.style.transform));
             /* 当兔兔的Y轴方向形变小于1时要按帧递减(恢复原始形变) */
