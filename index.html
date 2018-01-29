@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="Content-Type" content="text/html" ; charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE-edge">
+    <meta name="randerer" content="webkit">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <meta name="HandheldFriendly" content="true">
+    <meta name="apple-mobile-web-app-capable" content="true">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <meta name="format-detection" content="telephone=no, email=no">
+    <meta name="msapplication-tap-highlight" content="no">
+    <title>Title</title>
+
+
+</head>
+<body>
+
+<div class="scene-container">
+    <div class="scene bg-full"></div>
+</div>
+<style>
+    html,body {
+        width: 100%;
+        height: 100%;
+        overflow: hidden;
+        font-size: 62.5%;
+    }
+    .scene-container {
+        width: 100%; height: 100%;
+    }
+    .bg-full {
+        background-repeat: no-repeat;
+        background-size: 100% 100%;
+        background-position: center center;
+    }
+    .scene {
+        position: relative;
+        top: 0;
+        right: 0;
+        width: 230vw;
+        height: 300vh;
+        background-image: url(https://shfb.yunban.com.cn/jumping_little_rabbit_2d/assets/images/bg.png);
+        overflow: hidden;
+    }
+    .cube {
+        position: absolute;
+        display: none;
+        width: 17%;
+        height: auto;
+        transform-origin: bottom;
+        transform: scale3d(1,1,1); /* 开启硬件加速 */
+    }
+
+    @keyframes cubeFall {
+        0% {
+
+        }
+        25% {
+
+        }
+        50% {
+            transform: scale3d(1, 1, 1) translate3d(0, 0%, 0);
+        }
+        75% {
+            transform: scale3d(1, 0.9, 1) translate3d(0, 0%, 0);
+        }
+        100% {
+            transform: scale3d(1, 1, 1) translate3d(0, 0%, 0);
+        }
+    }
+
+    .cubeFall {
+        animation: cubeFall .5s cubic-bezier(0, 0.42, 0.28, 0.45);
+        animation-fill-mode: forwards;
+    }
+    .role {
+        position: absolute;
+        width: 29vw;
+        height: auto;
+        transform-origin: bottom;
+    }
+    </style>
+
+<script src="jquery.js"></script>
+<script src="game.js"></script>
+<script src="index.js"></script>
+</body>
+</html>
